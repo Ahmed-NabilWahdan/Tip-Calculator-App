@@ -1,44 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="style.css">
   <title>Frontend Mentor | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
+
 <body>
+  <header>
+    <h1>splitter</h1>
+  </header>
+  <main>
+    <section class="input-side">
+      <section class="bill-amount-section">
+        <h2>Bill</h2>
+        <input id="bill" type="number" placeholder="0" dir="rtl">
+      </section>
+      <section class="tip-selection-section">
+        <h2>Select Tip %</h2>
+        <button>5%</button>
+        <button>10%</button>
+        <button>15%</button>
+        <button>25%</button>
+        <button>50%</button>
+        <input id="custom-tip" type="number" placeholder="Custom">
+      </section>
+      <section class="people-number-section">
+        <h2>Number of People</h2>
+        <input id="people-number" type="number" placeholder="0" dir="rtl">
+      </section>
+    </section>
+    <section class="result-side">
+      <section class="tip-amount-section"></section>
+      <section class="total-section"></section>
+    </section>
+  </main>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
+  <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </div> -->
 </body>
+
 </html>
