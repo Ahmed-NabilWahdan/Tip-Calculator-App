@@ -43,18 +43,18 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.35rem;
     width: 95px;
-    /* word-wrap:break-word; */
+    /*To enforce word break*/
     overflow-wrap: break-word;
     margin-bottom: 2.5rem;
 }
 
 h2 {
-    /* font-size: 0.6rem; */
     font-size: 0.75rem;
 }
 
 main {
     background-color: white;
+    box-shadow: 0 0 50px -30px rgb(94, 122, 125);
     max-width: 950px;
     border-radius: 1rem;
     padding: 1.3rem;
@@ -66,7 +66,7 @@ main {
 input {
     width: 100%;
     border: none;
-    border-radius: 0.15rem;
+    border-radius: 0.2rem;
     background-color: var(--clr-very-light-grayish-cyan);
     color: var(--clr-very-dark-cyan);
     caret-color: var(--clr-strong-cyan);
@@ -74,90 +74,6 @@ input {
 
 input:focus {
     outline-color: var(--clr-strong-cyan);
-}
-
-button {
-    cursor: pointer;
-    border-radius: 0.2rem;
-    background-color: var(--clr-strong-cyan);
-}
-
-.input-side {
-    width: 50%;
-    font-size: 1rem;
-    /* outline: 3px solid black; */
-    padding: 0.5rem 0.7rem;
-}
-
-.input-side h2 {
-    color: var(--clr-very-dark-cyan);
-    /* font-size: 0.75rem; */
-    margin-bottom: 0.15rem;
-}
-
-.input-side section:not(.input-side section:last-child) {
-    margin-bottom: 1.5rem;
-}
-
-.input-side .bill-amount-section input {
-    background-image: url(images/icon-dollar.svg);
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    background-position-x: 0.8rem;
-    padding-inline: 0.8rem;
-    padding-block: 0.3rem;
-}
-
-.tip-selection-section .grid {
-    margin-top: 0.7rem;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
-}
-
-.tip-btn {
-    background-color: var(--clr-very-dark-cyan);
-    color: var(--clr-very-light-grayish-cyan);
-    border: none;
-    padding-block: 0.35rem;
-    padding-inline: 1.1rem;
-    cursor: pointer;
-}
-
-.tip-btn:hover,
-.reset-btn:not([disabled]):hover {
-    background-color: var(--clr-light-grayish-cyan);
-    color: var(--clr-very-dark-cyan);
-}
-
-.tip-btn:focus,
-.reset-btn:focus {
-    background-color: var(--clr-strong-cyan);
-    color: var(--clr-very-dark-cyan);
-    outline: 0;
-}
-
-.tip-btn:active {
-    background-color: var(--clr-strong-cyan);
-    color: var(--clr-very-dark-cyan);
-}
-
-.tip-selection-section .grid input {
-    padding-inline: 0.2rem;
-}
-
-.tip-selection-section .grid input::placeholder {
-    text-align: center;
-    color: var(--clr-very-dark-cyan);
-}
-
-.people-number-section input {
-    background-image: url(images/icon-person.svg);
-    background-repeat: no-repeat;
-    background-position-y: 50%;
-    background-position-x: 0.8rem;
-    padding-inline: 0.8rem;
-    padding-block: 0.3rem;
 }
 
 input::placeholder {
@@ -176,17 +92,98 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+
+button {
+    cursor: pointer;
+    border-radius: 0.2rem;
+    background-color: var(--clr-strong-cyan);
+}
+
+/* First Section */
+.input-side {
+    width: 50%;
+    font-size: 1rem;
+    padding: 0.5rem 0.7rem;
+}
+
+.input-side h2 {
+    color: var(--clr-very-dark-cyan);
+    margin-bottom: 0.15rem;
+}
+
+.input-side section:not(.input-side section:last-child) {
+    margin-bottom: 1.5rem;
+}
+
+.input-side .bill-amount-section input {
+    background-image: url(images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 0.8rem;
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+}
+
+.input-side .tip-selection-section .grid {
+    margin-top: 0.7rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+}
+
+.input-side .tip-btn {
+    background-color: var(--clr-very-dark-cyan);
+    color: var(--clr-very-light-grayish-cyan);
+    border: none;
+    padding-block: 0.35rem;
+    padding-inline: 1.1rem;
+    cursor: pointer;
+}
+
+.input-side .tip-btn:hover,
+.reset-btn:not([disabled]):hover {
+    background-color: var(--clr-light-grayish-cyan);
+    color: var(--clr-very-dark-cyan);
+}
+
+.input-side .tip-btn:focus,
+.result-side .reset-btn:focus {
+    background-color: var(--clr-strong-cyan);
+    color: var(--clr-very-dark-cyan);
+    outline: 0;
+}
+
+.input-side .grid input {
+    padding-inline: 0.5rem;
+}
+
+.tip-selection-section .grid input::placeholder {
+    text-align: center;
+    color: var(--clr-very-dark-cyan);
+}
+
+.input-side .people-number-section input {
+    background-image: url(images/icon-person.svg);
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    background-position-x: 0.8rem;
+    padding-inline: 0.8rem;
+    padding-block: 0.3rem;
+}
+
+/* Second Section */
 .result-side {
     width: 50%;
+    font-size: 1rem;
     padding: 2rem 1.7rem;
     border-radius: 0.5rem;
     background-color: var(--clr-very-dark-cyan);
+    display: flex;
+    flex-direction: column;
 }
 
 .result-side h2 {
     color: var(--clr-very-light-grayish-cyan);
-    /* outline: 3px solid yellow; */
-    /* width: 50%; */
 }
 
 .result-side span {
@@ -197,12 +194,6 @@ input[type=number] {
 .result-side p {
     font-size: 2rem;
     color: var(--clr-strong-cyan);
-    /* outline: 3px solid red; */
-}
-
-.result-side {
-    display: flex;
-    flex-direction: column;
 }
 
 .result-side .tip-amount-section,
@@ -212,10 +203,9 @@ input[type=number] {
     align-items: center;
     flex-wrap: wrap;
     margin-bottom: 1rem;
-    /* outline: 3px solid red; */
 }
 
-.reset-btn {
+.result-side .reset-btn {
     margin-top: auto;
     text-transform: uppercase;
     font-size: 0.85rem;
@@ -224,35 +214,33 @@ input[type=number] {
     color: var(--clr-very-dark-cyan);
 }
 
-.reset-btn:disabled {
+.result-side .reset-btn:disabled {
     cursor: not-allowed;
     opacity: 0.2;
 }
 
-/* @media screen and (max-width: 870px) {
-
-    .result-side .tip-amount-section,
-    .result-side .total-section {
-        flex-wrap: wrap;
-    }
-} */
+/* Media Query */
 @media screen and (max-width: 760px) {
 
-    main{
+    main {
         width: 100%;
         flex-wrap: wrap;
         border-radius: 1rem 1rem 0 0;
     }
-    .input-side , .result-side{
+
+    .input-side,
+    .result-side {
         width: 100%;
     }
 }
+
 @media screen and (max-width: 410px) {
 
-    .input-side .grid{
-        grid-template-columns: repeat(2,1fr);
+    .input-side .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
-    .result-side p{
+
+    .result-side p {
         font-size: 1.5rem;
     }
 }
