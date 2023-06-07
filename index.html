@@ -35,12 +35,14 @@
       </section>
       <section class="tip-selection-section">
         <h2>Select Tip %</h2>
-        <button>5%</button>
-        <button>10%</button>
-        <button>15%</button>
-        <button>25%</button>
-        <button>50%</button>
-        <input id="custom-tip" type="number" placeholder="Custom">
+        <div class="grid">
+          <button class="tip-btn">5%</button>
+          <button class="tip-btn">10%</button>
+          <button class="tip-btn">15%</button>
+          <button class="tip-btn">25%</button>
+          <button class="tip-btn">50%</button>
+          <input id="custom-tip" type="number" placeholder="Custom" dir="rtl">
+        </div>
       </section>
       <section class="people-number-section">
         <h2>Number of People</h2>
@@ -48,8 +50,23 @@
       </section>
     </section>
     <section class="result-side">
-      <section class="tip-amount-section"></section>
-      <section class="total-section"></section>
+      <section class="tip-amount-section">
+        <h2>Tip Amount
+          </br>
+          <span>/ person</span>
+        </h2>
+        <p>$4.27</p>
+      </section>
+      <section class="total-section">
+        <h2>Total
+          </br>
+          <span>/ person</span>
+        </h2>
+        <p>$32.79</p>
+      </section>
+      <button class="reset-btn">reset</button>
+    </section>
+    <!-- <button>reset</button> -->
     </section>
   </main>
 
