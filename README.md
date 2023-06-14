@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [My solutions page](https://www.frontendmentor.io/profile/Ahmed-NabilWahdan/solutions)
-- Live Site URL: [Live site by GitHub](https://ahmed-nabilwahdan.github.io/Testimonials-Grid-Section/)
+- Live Site URL: [Live site by GitHub](https://ahmed-nabilwahdan.github.io/Tip-Calculator-App/)
 
 ## My process
 
