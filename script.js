@@ -59,8 +59,6 @@ customTipInput.addEventListener('keydown', (eventObject) => {
     ) {
         eventObject.preventDefault()
     }
-    console.log(eventObject.target.value)
-
 });
 customTipInput.addEventListener('input', (eventObject) => {
     billValue = billAmountInput.value != '' ? Number(billAmountInput.value) : 0;
