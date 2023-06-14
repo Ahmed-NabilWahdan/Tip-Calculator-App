@@ -104,13 +104,15 @@ button {
     width: 50%;
     font-size: 1rem;
     padding: 0.5rem 0.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .input-side h2 {
     color: var(--clr-very-dark-cyan);
     margin-bottom: 0.15rem;
 }
-
 .input-side section:not(.input-side section:last-child) {
     margin-bottom: 1.5rem;
 }
@@ -159,6 +161,7 @@ button {
 
 .tip-selection-section .grid input::placeholder {
     text-align: center;
+    font-size: 0.85rem;
     color: var(--clr-very-dark-cyan);
 }
 
@@ -170,7 +173,21 @@ button {
     padding-inline: 0.8rem;
     padding-block: 0.3rem;
 }
-
+.error-dev{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.error-dev .error-msg{
+    color: red;
+    margin-inline-start: 0.2rem;
+}
+.display-none{
+    display: none;
+}
+.outline-red{
+    outline: 3px solid red;
+}
 /* Second Section */
 .result-side {
     width: 50%;
@@ -180,6 +197,7 @@ button {
     background-color: var(--clr-very-dark-cyan);
     display: flex;
     flex-direction: column;
+    
 }
 
 .result-side h2 {
@@ -218,6 +236,7 @@ button {
     cursor: not-allowed;
     opacity: 0.2;
 }
+
 
 /* Media Query */
 @media screen and (max-width: 760px) {
