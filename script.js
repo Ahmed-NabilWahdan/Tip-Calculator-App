@@ -85,22 +85,6 @@ customTipInput.addEventListener('input', (eventObject) => {
         errorMessage.classList.add('display-none')
         peopleNumberInput.classList.remove('outline-red');
     }
-
-
-    // if (peopleNumber != 0 && eventObject.target.value != '') {
-    //     tipPercentage = Number(eventObject.target.value) / 100;
-    //     tipAmountForPerson = (billValue / peopleNumber) * tipPercentage;
-    //     totalForPerson = (billValue / peopleNumber) + tipAmountForPerson;
-
-    //     // to get only 2 digits after the dicemal point.
-    //     tipAmountResult.textContent = "$" + Math.floor(tipAmountForPerson * 100) / 100;
-    //     totalSectionResult.textContent = "$" + Math.round(totalForPerson * 100) / 100;
-    //     errorMessage.classList.add('display-none')
-    // } else {
-    //     tipAmountResult.textContent = "$0.00";
-    //     totalSectionResult.textContent = "$0.00";
-    //     errorMessage.classList.remove('display-none')
-    // }
 });
 
 resetButton.addEventListener('click', (eventObject) => {
