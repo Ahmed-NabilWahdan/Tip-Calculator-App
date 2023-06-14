@@ -36,17 +36,20 @@
       <section class="tip-selection-section">
         <h2>Select Tip %</h2>
         <div class="grid">
-          <button class="tip-btn">5%</button>
-          <button class="tip-btn">10%</button>
-          <button class="tip-btn">15%</button>
-          <button class="tip-btn">25%</button>
-          <button class="tip-btn">50%</button>
+          <button class="tip-btn" value="5">5%</button>
+          <button class="tip-btn" value="10">10%</button>
+          <button class="tip-btn" value="15">15%</button>
+          <button class="tip-btn" value="25">25%</button>
+          <button class="tip-btn" value="50">50%</button>
           <input id="custom-tip" type="number" placeholder="Custom" dir="rtl">
         </div>
       </section>
       <section class="people-number-section">
-        <h2>Number of People</h2>
-        <input id="people-number" type="number" placeholder="0" dir="rtl">
+        <div class="error-dev">
+          <h2>Number of People</h2>
+          <h2 class="error-msg display-none">Can't be zero</h2>
+        </div>
+        <input required id="people-number" type="number" placeholder="0" dir="rtl">
       </section>
     </section>
     <section class="result-side">
@@ -74,6 +77,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+  <script src="script.js"></script>
 </body>
 
 </html>
