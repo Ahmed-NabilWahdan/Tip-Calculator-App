@@ -42,6 +42,7 @@ tipSelectionSection.addEventListener('click', (eventObject) => {
             totalResult.textContent = "$" + Math.round(totalForPerson * 100) / 100;
             errorMessage.classList.add('display-none')
             peopleNumberInput.classList.remove('outline-red');
+            resetButton.toggleAttribute('disabled' , false);
 
         } else {
             errorMessage.classList.remove('display-none')
@@ -50,7 +51,6 @@ tipSelectionSection.addEventListener('click', (eventObject) => {
     }
 });
 
-let pressedEnter = false;
 customTipInput.addEventListener('keydown', (eventObject) => {
     if (
         (eventObject.key == "-" || eventObject.key == "+" || eventObject.key == "e")
@@ -84,6 +84,7 @@ customTipInput.addEventListener('input', (eventObject) => {
         totalResult.textContent = "$" + Math.round(totalForPerson * 100) / 100;
         errorMessage.classList.add('display-none')
         peopleNumberInput.classList.remove('outline-red');
+        resetButton.toggleAttribute('disabled' , false);
     }
 });
 
@@ -95,4 +96,7 @@ resetButton.addEventListener('click', (eventObject) => {
     totalResult.textContent = "$0.00"
     errorMessage.classList.add('display-none');
     peopleNumberInput.classList.remove('outline-red');
+    resetButton.toggleAttribute('disabled' , true);
 });
+
+
